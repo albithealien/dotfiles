@@ -1,0 +1,18 @@
+[
+	{
+		"key": "ctrl+e",
+		"command": "workbench.view.explorer"
+	},
+	{
+		"key": "ctrl+shift+v",
+		"command": "-markdown.showPreview"
+	},
+	{
+		"key": "ctrl+[Comma]",
+		"command": "-workbench.action.openSettings"
+	},
+	{
+		"key": "ctrl+[Comma]",
+		"command": "workbench.action.terminal.toggleTerminal"
+	}
+]

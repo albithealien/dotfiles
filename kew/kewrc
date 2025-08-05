@@ -1,0 +1,43 @@
+[miscellaneous]
+path=/home/albi/songs
+hideLogo=0
+hideHelp=0
+lastVolume=100
+
+# faster startup times
+cacheLibrary=-1
+
+# exit after playing the whole playlist
+quitOnStop=0
+
+# save repeat and shuffle settings
+saveRepeatShuffleSettings=1
+repeatState=0
+shuffleEnabled=0
+
+# bindings
+[key bindings]
+volumeUp=+
+volumeUpAlt==
+volumeDown=-
+previousTrackAlt=h
+nextTrackAlt=l
+scrollUpAlt=k
+scrollDownAlt=j
+switchNumberedSong=
+togglePause=p
+toggleColorsDerivedFrom=i
+toggleVisualizer=v
+toggleAscii=b
+toggleRepeat=r
+toggleShuffle=s
+seekBackward=a
+seekForward=d
+savePlaylist=x
+addToMainPlaylist=.
+updateLibrary=u
+moveSongUp=t
+moveSongDown=g
+enqueueAndPlay=^M
+sortLibrary=o
+quit=q

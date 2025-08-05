@@ -1,0 +1,75 @@
+# alacritty
+super + shift + Return
+	alacritty
+
+# dmenu
+super + p
+    dmenu_run -nb '#000000' -nf '#ffffff' -sb '#4ad66d' -sf '#000000' -fn 'CommitMono:size=12:bold' -l 0
+
+# screenshot
+super + {s, shift + s}
+   scrot -s ~/images/screenshots/%Y-%m-%d-%H%M%S.png -e 'xclip -selection clipboard -t image/png'
+
+# focus next or previous window}
+super + {j,k}
+	dkcmd win focus {next,prev}
+
+# close window, swap tiled window in/out of master, cycle tiled windows in place
+super + shift + {q,space,Tab}
+	dkcmd win {kill,swap,cycle}
+
+# fullscreen
+super + {f, shift + f}
+	dkcmd win full
+
+# toggle floating, sticky, or scratchpad
+super + shift + {g,y,u}
+	dkcmd win {float,stick,scratch}
+
+# move window
+super + shift + {h,j,k,l}
+	dkcmd win resize {x=-20,y=+20,y=-20,x=+20}
+
+# resize window
+super + ctrl + {h,j,k,l}
+	dkcmd win resize {w=-20,h=+20,h=-20,w=+20}
+
+# view, send, or follow to a workspace
+super + {_,shift + ,ctrl + }{1-7}
+	dkcmd ws {view,send,follow} {1-7}
+
+# view, send, or follow to the next, previous, last active,
+super + {_,shift + ,ctrl + }{BackSpace,Left,Right}
+	dkcmd ws {view,send,follow} {last,prevne,nextne}
+
+# view, send, or follow to the next, previous, or last active monitor
+super + {_,shift + ,ctrl + }{comma,period,backslash}
+	dkcmd mon {view,send,follow} {prev,next,last}
+
+# change active workspace layout or cycle between them
+super + alt + {t,r,m,g,s,w,f,u,c}
+	dkcmd set layout {tile,rtile,mono,grid,spiral,dwindle,none,tstack,cycle}
+
+# change number of windows in master or first stack
+super + {_,shift + }{i,d}
+	dkcmd set {master,stack} {+1,-1}
+
+# change gap width
+super + {plus,minus}
+	dkcmd set gap {+5,-5}
+
+# change border widths
+super + ctrl + {_,shift + }{plus,minus}
+	dkcmd set border {width,outer_width} {+1,-1}
+
+# Reload sxhkd
+super + shift + x
+	pkill -USR1 -x sxhkd
+
+# Reload dk
+super + shift + r
+	dkcmd restart
+
+# Exit dk
+# super + shift + ctrl + q + e
+#   dkcmd exit

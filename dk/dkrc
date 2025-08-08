@@ -7,16 +7,17 @@ logfile="$HOME/.dklog"
 { # compound command to redirect all output
 
 	# workspace settings
-	dkcmd set numws=7
+	dkcmd set numws=8
 	dkcmd set ws=_ apply layout=tile master=1 stack=3 gap=4 msplit=0.6 ssplit=0.4
 	dkcmd set \
-		ws=1  name="terminal" \
-		ws=2  name="code" \
-		ws=3  name="browser" \
-		ws=4  name="a" \
-		ws=5  name="b" \
-		ws=6  name="c" \
-		ws=7  name="secondary" \
+		ws=1  name="life" \
+		ws=2  name="study" \
+		ws=3  name="work" \
+		ws=4  name="shell" \
+		ws=5  name="shows" \
+		ws=6  name="gaming" \
+		ws=7  name="generic" \
+		ws=8  name="monitor" \
 
     # static workspaces assigned to monitors
 	mon1='eDP'
@@ -28,14 +29,15 @@ logfile="$HOME/.dklog"
 		ws=4  mon=$mon2 \
 		ws=5  mon=$mon2 \
 		ws=6  mon=$mon2 \
-		ws=7  mon=$mon1 \
+		ws=7  mon=$mon2 \
+		ws=8  mon=$mon1 \
 
 	# minimum width/height for resizing, and minimum allowed on-screen when moving
 	dkcmd set win_minwh=50 win_minxy=10
 	# mantain gaps and borders in single window layouts
 	dkcmd set smart_gap=false smart_border=false
 	# define mouse mod and move/resize buttons
-	dkcmd set mouse mod=alt move=button1 resize=button3
+	dkcmd set mouse mod=super move=button3 resize=button1
 	# obey motif border hints on windows that draw their own
 	dkcmd set obey_motif=true
 
@@ -49,22 +51,22 @@ logfile="$HOME/.dklog"
 		outer_unfocus='#ffffff' \
 		outer_urgent='#222222'
 
-	# window rules
-    # dkcmd rule class="^thorium-browser$" ws=3
-
-    # open these floating
-	# dkcmd rule class="^(steam|melonDS)$" float=true
-
     # save from being grabbed by another ws while opening
 	dkcmd rule class="^codium$" ignore_msg=true
-	dkcmd rule class="^thorium$" ignore_msg=true
+	dkcmd rule class="^thorium-browser$" ignore_msg=true
 	dkcmd rule class="^cutter$" ignore_msg=true
 
-	# define some terminals and allow them to be absorbed by spawned windows
+	# define terminals for window swallowing
 	dkcmd rule class="^(st|st-256color|urxvt|kitty|alacritty|xterm|xterm-256color)$" terminal=true
 
+	# window rules
+    # dkcmd rule class="^$" ws=3
+
 	# focus window and workspace on opening
-	# dkcmd rule class="^cutter$" ws=1 focus=true
+	# dkcmd rule class="^$" ws=1 focus=true
+    
+    # open these floating
+	# dkcmd rule class="^$" float=true
 
 	# apply current rules
 	dkcmd rule apply '*'

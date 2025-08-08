@@ -39,4 +39,3 @@ bind '"\C-t": edit-and-execute-command'
 
 # Attaching to a tmux session!
 # tmux attach-session -t name || tmux new-session -s name
-

@@ -8,12 +8,9 @@ TERM                  = "xterm-256color"
 
 [window]
 padding               = { x = 2, y = 2 }
-# decorations           = "None"
-# decorations_theme_variant = "None"
 opacity               = 1.0
 blur                  = false
 class                 = { instance = "Alacritty", general = "Alacritty" }
-#option_as_alt         = "None"
 
 [font]
 normal                = { family = "Commit Mono", style = "Bold" }
@@ -26,7 +23,6 @@ glyph_offset          = { x = 0, y = 0 }
 builtin_box_drawing = false
 
 [selection]
-#semantic_escape_chars = ",│‘|:"' ()[]{}<>t"
 save_to_clipboard     = true
 
 [cursor.style]
@@ -46,9 +42,3 @@ command = "thorium"
 hyperlinks = true
 mouse.enabled = true
 regex = "(ipfs:|ipns:|magnet:|mailto:|gemini://|gopher://|https://|http://|news:|file:|git://|ssh:|ftp://)[^\u0000-\u001F\u007F-\u009F<>\"\\s{-}\\^⟨⟩`\\\\]+"
-
-[mouse]
-hide_when_typing = true
-bindings = [
-  { mouse = "Middle", action = "PasteSelection" },
-]

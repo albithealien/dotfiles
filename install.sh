@@ -10,8 +10,9 @@ sudo xbps-install -Syu \
     fzf \
     gleam \
     helix \
+    neovim \
     kew \
-    mgba \
+    mgba-qt \
     mpv \
     nsxiv \
     obs \
@@ -32,3 +33,4 @@ sudo xbps-install -Syu \
 go install golang.org/x/tools/gopls@latest
 go install github.com/go-delve/delve/cmd/dlv@latest
 go install github.com/pressly/goose/v3/cmd/goose@latest
+go install github.com/golangci/golangci-lint/v2/cmd/golangci-lint@v2.3.1
